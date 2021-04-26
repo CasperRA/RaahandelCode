@@ -673,6 +673,7 @@ top: 0;
 .openDropdownFilter {
   background-color: var(--white-color);
   color: var(--black-color);
+  width: 100%;
   padding: 0.75rem 1rem;
   margin-left: 1rem;
   font-size: 1em;
@@ -690,7 +691,7 @@ top: 0;
   z-index: 1;
   margin-left: 1rem;
   border: 1px solid var(--black-color);
-  width: 90%;
+  width: 100%;
 }
 
 /* Links inside the dropdown */
@@ -715,16 +716,58 @@ top: 0;
 .gridItems {
     display: grid;
     margin-top: 2rem;
-
-    grid-template-columns: 15% 15% 15% 15% 15% 15%;
-    grid-template-rows: 30% 30% 30%;
-    gap: 8% 2%;
+    grid-template-columns: 18% 18% 18% 18% 18% ;
+    grid-template-rows: 25% 25% 25% 25%;
+    gap: 12% 2.5%;
     grid-template-areas:
       "item1 item2 item3 item4 item5 item6"
       "item7 item8 item9 item10 item11 item12"
       "item13 item14 item15 item16 item17 item18";
 }
 
-.gridItems img {
+.gridItems a img {
     width: 100%;
+}
+
+
+
+
+/* Varerbeskrivelsesside med collumns */
+
+.collumnContainer {
+    margin-top: 2rem;
+    display: grid;
+    height: 85vh;
+    grid-template-columns: 42% 56%;
+    grid-template-rows: 100%;
+    gap: 2%;
+    grid-template-areas:
+      "left right";
+}
+
+.left{
+    width: 40%;
+    height: 50%;
+    margin-left: 60%;
+    background-color: var(--interact-deny-color);
+}
+
+.right{
+    width: 50%;
+    height: 95%;
+    background-color: var(--interact-color);
+}
+
+.productView {
+    display: flex;
+    flex-direction: column;
+}
+.productImageContainer {
+    width: 100%;
+}
+
+.productImageContainer img{
+    width: 100%;
+    position: relative;
+    top: 0;
 }

@@ -55,4 +55,29 @@ function dropdown() {
     }
 }
 
+function swap(x) {
+    if (x == 1) {
+        var basebutton = document.querySelector("#dropdownOpt1");
+        var basebuttonContent = document.querySelector("#dropdownOpt1").innerText;
+        console.log("1");
+    }
+    if (x == 2) {
+        var basebutton = document.querySelector("#dropdownOpt2");
+        var basebuttonContent = document.querySelector("#dropdownOpt2").innerText;
+        console.log("2");
+    }
+    if (x == 3) {
+        var basebutton = document.querySelector("#dropdownOpt3");
+        var basebuttonContent = document.querySelector("#dropdownOpt3").innerText;
+        console.log("3");
+    }
+    var buttonswitch = document.querySelector(".openDropdownFilter");
+    var buttonswitchContent = document.querySelector(".openDropdownFilter").innerText;
+
+    buttonswitch.innerText = basebuttonContent;
+    basebutton.innerText = buttonswitchContent;
+    
+    console.log("swap");
+    dropdown();
+}
 
