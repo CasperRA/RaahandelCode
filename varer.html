@@ -51,10 +51,26 @@
                 </div>
                 <div class="filterMargin">
                     <h2 class="h2Filter">Filter</h2>
+
                     <div class="filterSeperator"></div>
+
                     <p>Afstand fra køber</p>
                     <p id="afstand">50 km</p>
-                        <input type="range" min="0" max="100" value="50" step="5" id="slider">
+                    <input type="range" min="0" max="100" value="50" step="5" id="slider">
+                    <div class="radioswitch">
+                        <label class="switch"> 
+                            <input type="checkbox">
+                            <span class="buttonSlider"></span>
+                        </label>
+                        <p>Skjul udvalgte varer</p>
+                    </div>
+                    <div class="radioswitch">
+                        <label class="switch"> 
+                            <input type="checkbox">
+                            <span class="buttonSlider"></span>
+                        </label>
+                        <p>ØKO (Økologisk produkt)</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -63,10 +79,49 @@
         <section class="Varer">
             <h1>Varer</h1>
             <div class="varerSeperator"></div>
+            <div class="varerFilter">
+                <input class="searchFilter" type="search" placeholder="Søg" name="" id="">
+                <div class="dropdownFilter">
+                    <button class="openDropdownFilter" onclick="dropdown()">
+                        Nyeste &nbsp; &nbsp; &nbsp; <img src="/images/arrowdown.svg" alt="pil">
+                    </button>
+                    <div id="dropdownContent">
+                        <button>
+                            Mest købte
+                        </button>
+                        <button>
+                            Alfabetisk
+                        </button>
+                        <button>
+                            Flest på lager
+                        </button>
+                    </div>
+                </div>
+                <div class="gridItems">
+                    <img src="/images/varer.svg" alt="">
+                    <img src="/images/varer.svg" alt="">
+                    <img src="/images/varer.svg" alt="">
+                    <img src="/images/varer.svg" alt="">
+                    <img src="/images/varer.svg" alt="">
+                    <img src="/images/varer.svg" alt="">
+                    <img src="/images/varer.svg" alt="">
+                    <img src="/images/varer.svg" alt="">
+                    <img src="/images/varer.svg" alt="">
+                    <img src="/images/varer.svg" alt="">
+                    <img src="/images/varer.svg" alt="">
+                    <img src="/images/varer.svg" alt="">
+                    <img src="/images/varer.svg" alt="">
+                    <img src="/images/varer.svg" alt="">
+                    <img src="/images/varer.svg" alt="">
+                    <img src="/images/varer.svg" alt="">
+                    <img src="/images/varer.svg" alt="">
+                    <img src="/images/varer.svg" alt="">
+                </div>
+            </div>
         </section>
     </div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

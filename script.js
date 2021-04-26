@@ -1,5 +1,5 @@
 
- if (window.location.href.match('car-driving.html') != null) {
+ if (window.location.href.match('opretKunde.html') != null) {
     // Get the modal
     var modal = document.getElementById("popupOpret");
 
@@ -40,3 +40,19 @@ slider.oninput = function() {
   output.innerHTML = slider.value + " km";
   console.log(slider.value);
 }
+
+var content = document.querySelector("#dropdownContent");
+function dropdown() {
+    
+    if (content.style.display == "block") {
+        content.style.display = "none";
+        console.log("invis");
+    }
+
+    else {
+        content.style.display = "block";
+        console.log("Content!")
+    }
+}
+
+
