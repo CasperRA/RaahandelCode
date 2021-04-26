@@ -1,0 +1,551 @@
+/* Basics css setup, semantik, responsiveness og import */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --base-color:#efe9db;
+    --interact-color:#16639f;
+    --white-color:#ffffff;
+    --seperator-color:#8a8a8a;
+    --interact-deny-color:#f39c12;
+    --black-color:#2a2a2a;
+}
+
+body{
+    background-color:var(--base-color);
+    font-family:'Montserrat', sans-serif;
+    color: var(--black-color);
+}
+a {
+    color: inherit;
+    font-style: none;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.forside {
+    height: 130vh;
+}
+/* Header og indhold til header */
+
+header {
+height: 5rem;
+display: flex;
+width: 100%;
+background-color: var(--base-color);
+border-bottom: 1px solid var(--black-color);
+}
+
+.sticky{
+position: fixed;
+top: 0;
+}
+
+.logoHeader {
+    width: 50%;
+}
+
+.logoHeader img {
+    height: 2.6rem;
+    padding: 1.2rem;
+}
+
+.loginHeader {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1rem;
+}
+
+.loginHeader a {
+    padding: 2.1rem;
+    font-size: 0.8em;
+    border-bottom: solid 0.2rem rgb(22, 99, 159,0.0);
+}
+
+.loginHeader a:hover {
+    color: var(--interact-color);
+    border-bottom: solid 0.2rem rgb(22, 99, 159,1.0);
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+
+
+/* Intro Sektion med baggrundsbillede */
+
+.intro {
+    margin-top: 5rem;
+    height: 25rem;
+    background-image: url('images/baggrundforside.jpg');
+    background-position: 50% 50%; 
+    display: flex;
+    justify-content: center;
+}
+.introWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    width: 28rem;
+}
+.logoOnImg{
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.introh2 {
+    color: var(--white-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+
+
+/* Opret bruger sektion med flyvende boks og nyt ikon*/
+
+.user {
+    height: 15rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.userFloatingWrapper {
+    height: 15rem;
+    width: 30rem;
+    background-color: var(--white-color);
+    border: 1px solid var(--seperator-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.userKunde {
+    background-color: var(--interact-color);
+    width: 16rem;
+    height: 3rem;
+    margin: 0 auto;
+    color: var(--white-color);
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.userKunde a {
+    padding: 1rem;
+    padding-left: 0.5rem;
+}
+
+.userKunde img {
+    width: 2.8rem;
+    margin-left: 1rem;
+}
+
+.userProducent {
+    background-color: var(--interact-color);
+    margin: 0 auto;
+    padding: 1rem;
+    width: 14rem;
+    height: 1rem;
+    color: var(--white-color);
+}
+
+.userText {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+/* Omkring råhandel sektion med titel og tekst */
+
+.aboutTitleWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.aboutTitle {
+    font-size: 1.875rem;
+}
+.aboutW {
+    width:3.2rem;
+    line-height: 1.875rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.aboutText {
+    display: block;
+    font-size: 1.25em;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 60%;
+    font-weight: 500;
+}
+
+
+
+/* ----- Oprettelses section på opretKunde.html ----- */
+
+.oprettelse{
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+}
+.oprettelseTitle{
+    color: var(--seperator-color);
+}
+
+.oprettelse h1{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: -0.5rem;
+    font-size: 1.75rem;
+}
+
+.oprettelseSeperator{
+    width: 25%;
+    height: 0.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--seperator-color);    
+}
+
+.oprettelse p {
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+.oprettelse input{
+    width: 100%;
+    height: 1.8rem;
+    margin-top: 0.75rem;
+    margin-bottom: 1.2rem;
+}
+
+/* Grid i oprettelse */
+.gridOprettelse {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0rem 2rem;
+    grid-template-areas:
+      "Faktureringsadresse PostnrF ByF"
+      "Leveringsadresse PostnrL ByL";
+  }
+  .Faktureringsadresse {
+      grid-area: Faktureringsadresse;
+    }
+  .PostnrF {
+      grid-area: PostnrF;
+    }
+  .ByF { 
+      grid-area: ByF;
+    }
+  .Leveringsadresse {
+      grid-area: Leveringsadresse;
+    }
+  .PostnrL {
+      grid-area: PostnrL;
+    }
+  .ByL {
+      grid-area: ByL;
+    }
+.gridOprettelse div input{
+    width: 100%;
+    margin-top: 0.75rem;
+}
+.oprettelseSeperator2 {
+    margin-top: 0.75rem;
+    margin-bottom: 1.5rem;
+    height: 0.1rem;
+    width: 100%;
+    background-color: var(--seperator-color);
+}
+#buttonOpret {
+    border-radius: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    padding: 0.85rem 2rem;
+    background-color: var(--interact-color);
+    color: var(--white-color);
+}
+.arrowOpret {
+    object-fit: contain;
+    margin-left: 0.2rem;
+}
+
+/* Popup fra w3schools*/
+#popupOpret {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* var(--black-color) w/ opacity */
+    -webkit-animation: fade 0.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fade 0.5s; /* Firefox < 16 */
+     -ms-animation: fade 0.5s; /* Internet Explorer */
+      -o-animation: fade 0.5s; /* Opera < 12.1 */
+         animation: fade 0.5s;
+  }
+  
+  @keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+  }
+
+
+  /* Popup Content*/
+  .popupContent {
+    background-color: #fefefe;
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* Kryds lukke knap */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: var(--black-color);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .popupContentWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    justify-content: center;
+    padding-left: 1rem;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.4rem;
+}
+
+  .logoPopup {
+    margin: 0 auto;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  .popupContentWrapper p{
+    font-size: 0.813rem;
+}
+
+  .popupContentWrapper a {
+    width: 55%;
+    padding: 0.75rem 1rem;
+    color: var(--white-color);
+    font-size: 0.875rem;
+  }
+
+  .yesNotfication {
+    background-color: var(--interact-color);
+    margin: 0.5rem auto;
+    margin-top: 2rem;
+  }
+
+  .noNotification {
+    background-color: var(--interact-deny-color);
+    margin: 0.5rem auto;
+    margin-bottom: 3rem;
+  }
+
+
+
+/* Varerside */
+.preHeader{
+    display: flex;
+    height: 2.1rem;
+    width: 100%;
+    border-bottom: 1px solid var(--black-color);
+    justify-content: flex-end;
+    font-weight: bold;
+    font-size: 0.7rem;
+    line-height: 2.1rem;
+}
+
+.preHeader p{
+    padding-right: 2rem;
+}
+
+.preHeader a{
+    padding-right: 2rem;
+}
+
+.varerHeader {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1rem;
+}
+
+.varerHeader a {
+    padding: 2.1rem;
+    font-size: 0.8em;
+    border-bottom: solid 0.2rem rgb(22, 99, 159,0.0);
+}
+
+.varerHeader a:hover{
+    color: var(--interact-color);
+    border-bottom-color: rgb(22, 99, 159, 1.0);
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.varerHeader .active{
+    color: var(--interact-color);
+    border-bottom: solid 0.2rem var(--interact-color);
+}
+
+.gridVarer {
+    display: grid;
+    grid-template-columns: 0.35fr 1.65fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "Kategorier Varer";
+}
+
+.Kategorier {
+    grid-area: Kategorier;
+    border-right: 1px solid var(--black-color);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.kategoriWrapper {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+.buttonIkoner{
+    background: none;
+    border: none;
+    color: var(--interact-color);
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0.5rem;
+}
+    
+.kategoriWrapper .h2Kategori {
+    margin-left: 0.5rem;
+}
+
+.kategoriSeperator{
+    width: 25%;
+    height: 0.2rem;
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--black-color);
+}
+    /* Grid med kategori billeder */
+.gridKategori {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem 1.5rem;
+    margin: 0 auto;
+    grid-template-areas:
+        "Kategori1 Kategori2 Kategori3"
+        "Kategori4 Kategori5 Kategroi6";
+}
+.gridKategori img {
+    margin: 0 auto;
+}
+      
+.Kategori1 {
+    grid-area: Kategori1;
+}
+      
+.Kategori2 {
+    grid-area: Kategori2;
+}
+      
+.Kategori3 { 
+    grid-area: Kategori3;
+}
+      
+.Kategori4 {
+    grid-area: Kategori4;
+}
+      
+.Kategori5 {
+    grid-area: Kategori5;
+}
+      
+.Kategroi6 {
+    grid-area: Kategroi6;
+}
+
+.filterMargin {
+    margin-left: 0.5rem;
+}
+
+.h2Filter {
+    margin-top: 2rem;
+}
+
+.filterSeperator {
+    margin-top:1rem;
+    margin-bottom: 1rem;
+    width: 15%;
+    height: 0.2rem;
+    background-color: var(--black-color);
+}
+
+.filterMargin p {
+    font-weight: bold;
+}
+
+#slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+    /* Varer grid area / section */
+
+    .Varer {
+        grid-area: Varer;
+    
+        }
+    

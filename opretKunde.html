@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Råhandel - Opret som kunde</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logoHeader">
+        <a href="index.html"><img src="https://res.cloudinary.com/raahandel/image/upload/v1587540181/assets/logoBlackHorizontal.svg"
+                alt="logo normal"></a> 
+        </div>
+        <div class="loginHeader">
+            <a href="">KUNDELOGIN</a>
+            <a href="">PRODUCENTLOGIN</a>
+        </div>
+    </header>
+
+    <section class="oprettelse">
+        <p class="oprettelseTitle">Opret bruger</p>
+        <h1>Kundeoprettelse</h1>
+
+        <div class="oprettelseSeperator"></div>
+
+        <p>CVR-nummer*</p>
+        <input type="text">
+
+        <p>Navn i daglig tale*</p>
+        <input type="text">
+
+        <div class="gridOprettelse">
+            <div class="Faktureringsadresse">
+                <p>Faktureringsadresse*</p>
+                <input type="text">
+            </div>
+            <div class="PostnrF">
+                <p>Postnr*</p>
+                <input type="text">
+            </div>
+            <div class="ByF">
+                <p>By*</p>
+                <input type="text">
+            </div>
+            <div class="Leveringsadresse">
+                <p>Leveringsadresse*</p>
+                <input type="text">
+            </div>
+            <div class="PostnrL">
+                <p>Postnr*</p>
+                <input type="text">
+            </div>
+            <div class="ByL">
+                <p>By*</p>
+                <input type="text">
+            </div>
+        </div>
+        <p>Kontaktperson(er)*</p>
+        <input type="text">
+        <div class="oprettelseSeperator2"></div>
+        <p>Email*</p>
+        <input type="text">
+        <p>Kodeord*</p>
+        <input type="text">
+        <button id="buttonOpret" type="submit">Opret bruger <img class="arrowOpret" src="/images/arrow.svg" alt="pil"></button>
+    </section>
+<!-- The Modal -->
+<div id="popupOpret" class="popup">
+
+    <!-- Modal content -->
+    <div class="popupContent">
+      <span class="close">&times;</span>
+      <div class="popupContentWrapper">
+        <img class="logoPopup" src="/images/logosort.svg" alt="Råhandel logo">
+        <p>For at skabe levering- og bestillingssikkerhed
+            mellem Råhandels kunder og producenter, har
+            Råhandel oprettet et notification-system, der
+            påminder brugeren om kommende deadlines
+            for salg og køb. <br>
+            Råhandel anbefaler at slå notifikationer til for
+            at skabe rutine mellem køber & producent.</p>
+            <a class="yesNotfication" href="varer.html">SLÅ NOTIFIKATIONER TIL</a>
+            <a class="noNotification" href="varer.html">FRAVÆLG NOTIFIKATIONER</a>
+      </div>
+    </div>
+  
+  </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

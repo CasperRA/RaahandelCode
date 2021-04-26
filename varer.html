@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Råhandel - Oversigt</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="preHeader">
+        <p>Hej Emil Diamant</p>
+        <a href="">KONTO</a>
+        <a href="index.html">LOG UD</a>
+    </div>
+
+    <header>
+        <div class="logoHeader">
+            <a href="index.html"><img
+                    src="https://res.cloudinary.com/raahandel/image/upload/v1587540181/assets/logoBlackHorizontal.svg"
+                    alt="logo normal"></a>
+        </div>
+        <div class="varerHeader">
+            <a class="active" href="">VARER</a>
+            <a href="">PRODUCENTER</a>,
+            <a href="">LEVERINGSDAG</a>
+            <a href="">KURV</a>
+        </div>
+    </header>
+    <div class="gridVarer">
+
+        <!-- Section med kategori / side menu -->
+        <section class="Kategorier">
+            <div class="kategoriWrapper">
+                <button class="buttonIkoner" type="submit">🛈 Ikonforklaring</button>
+                <h2 class="h2Kategori">Kategorier</h2>
+                <div class="kategoriSeperator"></div>
+                <div class="gridKategori">
+                    <img class="kategori1" src="images/kategori.svg" alt="">
+                    <img class="kategori2" src="images/kategori.svg" alt="">
+                    <img class="kategori3" src="images/kategori.svg" alt="">
+                    <img class="kategori4" src="images/kategori.svg" alt="">
+                    <img class="kategori5" src="images/kategori.svg" alt="">
+                    <img class="kategori6" src="images/kategori.svg" alt="">
+                </div>
+                <div class="filterMargin">
+                    <h2 class="h2Filter">Filter</h2>
+                    <div class="filterSeperator"></div>
+                    <p>Afstand fra køber</p>
+                    <p id="afstand">50km</p>
+                    <div class="sliderContainer">
+                        <input type="range" min="0" max="100" value="50" id="slider">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section med varerne -->
+        <section class="Varer">
+
+        </section>
+    </div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
