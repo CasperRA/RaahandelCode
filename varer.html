@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Råhandel - Oversigt</title>
+    <title>Råhandel - Varer</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,8 +16,14 @@
 <body>
     <div class="preHeader">
         <p>Hej Emil Diamant</p>
-        <a href="">KONTO</a>
+        <div class="alignPreHeader">
+            <a href="">KONTO</a>
+            <img class="" src="/images/konto.svg" alt="konto ikon">
+        </div>
+        <div class="alignPreHeader">
         <a href="index.html">LOG UD</a>
+        <img src="/images/logud.svg" alt="log ud knap">
+    </div>
     </div>
 
     <header>
@@ -51,10 +57,26 @@
                 </div>
                 <div class="filterMargin">
                     <h2 class="h2Filter">Filter</h2>
+
                     <div class="filterSeperator"></div>
+
                     <p>Afstand fra køber</p>
                     <p id="afstand">50 km</p>
-                        <input type="range" min="0" max="100" value="50" step="5" id="slider">
+                    <input type="range" min="0" max="100" value="50" step="5" id="slider">
+                    <div class="radioswitch">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="buttonSlider"></span>
+                        </label>
+                        <p>Skjul udvalgte varer</p>
+                    </div>
+                    <div class="radioswitch">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="buttonSlider"></span>
+                        </label>
+                        <p>ØKO (Økologisk produkt)</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -63,10 +85,49 @@
         <section class="Varer">
             <h1>Varer</h1>
             <div class="varerSeperator"></div>
+            <div class="varerFilter">
+                <input class="searchFilter" type="search" placeholder="Søg" name="" id="">
+                <div class="dropdownFilter">
+                    <button class="openDropdownFilter" onclick="dropdown()">
+                        Nyeste <img src="/images/arrowdown.svg" alt="pil">
+                    </button>
+                    <div id="dropdownContent">
+                        <button id="dropdownOpt1" onclick="swap(1)">
+                            Mest købte
+                        </button>
+                        <button id="dropdownOpt2" onclick="swap(2)">
+                            Alfabetisk
+                        </button>
+                        <button id="dropdownOpt3" onclick="swap(3)">
+                            Flest på lager
+                        </button>
+                    </div>
+                </div>
+                <div class="gridItems">
+                    <div><a href="varerbeskrivelse.html"><img src="/images/varer.svg" alt=""></a></div>
+                    <div><a href="varerbeskrivelse.html"><img src="/images/varer.svg" alt=""></a></div>
+                    <div><a href="varerbeskrivelse.html"><img src="/images/varer.svg" alt=""></a></div>
+                    <div><a href="varerbeskrivelse.html"><img src="/images/varer.svg" alt=""></a></div>
+                    <div><a href="varerbeskrivelse.html"><img src="/images/varer.svg" alt=""></a></div>
+                    <div><a href="varerbeskrivelse.html"><img src="/images/varer.svg" alt=""></a></div>
+                    <div><a href="varerbeskrivelse.html"><img src="/images/varer.svg" alt=""></a></div>
+                    <div><a href="varerbeskrivelse.html"><img src="/images/varer.svg" alt=""></a></div>
+                    <div><a href="varerbeskrivelse.html"><img src="/images/varer.svg" alt=""></a></div>
+                    <div><a href="varerbeskrivelse.html"><img src="/images/varer.svg" alt=""></a></div>
+                    <div><a href="varerbeskrivelse.html"><img src="/images/varer.svg" alt=""></a></div>
+                    <div><a href="varerbeskrivelse.html"><img src="/images/varer.svg" alt=""></a></div>
+                    <div><a href="varerbeskrivelse.html"><img src="/images/varer.svg" alt=""></a></div>
+                    <div><a href="varerbeskrivelse.html"><img src="/images/varer.svg" alt=""></a></div>
+                    <div><a href="varerbeskrivelse.html"><img src="/images/varer.svg" alt=""></a></div>
+                    <div><a href="varerbeskrivelse.html"><img src="/images/varer.svg" alt=""></a></div>
+                    <div><a href="varerbeskrivelse.html"><img src="/images/varer.svg" alt=""></a></div>
+                    <div><a href="varerbeskrivelse.html"><img src="/images/varer.svg" alt=""></a></div>
+                </div>
+            </div>
         </section>
     </div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
